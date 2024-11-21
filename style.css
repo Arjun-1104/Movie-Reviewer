@@ -1,0 +1,267 @@
+/* Universal use */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.border{
+    border: 1px solid red;
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    font-size: 16px;
+}
+
+/* navbar css */
+nav{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0% 10%;
+    background-color: rgba(16, 16, 46, 0.922);
+}
+nav h1{
+    color: #fff;
+}
+.input-search-btn{
+    width: 25%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+.input-search-btn input {
+    width: 70%;
+    height: 70%;
+    margin-right: 2%;
+    padding-left: 10px;
+    font-size: 1em;
+    border: none;
+    outline: none;
+    /* border-radius: 5px; */
+    border-radius: 5px 0px 0px 5px;
+}
+.input-search-btn button{
+    width: 25%;
+    height: 70%;
+    border-radius: 0px 5px 5px 0px;
+    border: none;
+    font-weight: 600;
+    font-size: 1em;
+    background-color: #f5c518;
+    cursor: pointer;
+    
+}
+.input-search-btn button:hover{
+    background-color: #ffdd45;
+}
+
+/* Main section in the center */
+
+#main{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(242, 241, 240);
+}
+#banner2{
+    font-weight: 600;
+    font-size: 20px;
+    
+}
+#banner{
+    width: 70%;
+    height: 80%;
+    display: none;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
+    /* transition: all 3s; */
+    overflow:auto;
+
+}  
+
+/* Banner left side  */
+.movie-poster{
+    width: 30%;
+    height: 100%;
+}
+.movie-poster img{
+   width: 100%;
+   height: 100%;
+   
+}
+
+/* Banner right side */
+#movie-details{
+    width: 70%;
+    height: 100%;
+    padding: 2% 4%;
+    background-color: #fff;
+    overflow: auto;
+}
+#movie-details h2{
+    text-align: center;
+    font-size: 2em;
+
+}
+#rating{
+    text-align: center;
+    font-weight: 600;
+    margin-top: 2%;
+}
+#rating img{
+    width: 20px;
+    height: 20px;
+    mix-blend-mode:hard-light;
+}
+
+#movie-details #rating span{
+    font-weight: 400;
+}
+#buttons{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 2%;
+}
+
+#buttons button{
+    padding: 1%;
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 5px;
+    color: #fff;
+    background-color: rgba(16, 16, 46, 0.922);
+    margin: 1%;
+}
+
+#movie-details p{
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-top: 3%;
+}
+#movie-details p span{
+    font-weight: 400;
+}
+
+/* Footer section */
+footer{
+    width: 100%;
+    height: 10%;
+    background-color: rgba(16, 16, 46, 0.922);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font: 1em;
+    position: fixed;
+    bottom: 0;  
+}
+
+/* Resposive sizes */
+@media screen and (max-width:1440px) {
+    .input-search-btn{
+        width: 30%;
+    }
+}
+@media screen and (max-width:1024px) {
+    .input-search-btn{
+        width: 35%;
+    }
+}
+@media screen and (max-width:768px) {
+    .wrapper{
+        font-size: 14px;
+    }
+    .input-search-btn{
+        width: 40%;
+    }
+    #banner{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }  
+    .movie-poster{
+        width: 85%;
+        height: fit-content;
+    }
+    .movie-poster img{
+        border-radius: 5px 5px 0px 0px;
+    }
+    #movie-details{
+         width: 85%;
+        overflow:visible;
+        border-radius: 0px 0px 5px 5px;
+    }
+}
+@media screen and (max-width:426px) {
+    .wrapper{
+        font-size: 10px;
+    }
+    nav{
+        height: 7%;
+        padding: 0% 5%;
+    }
+    #main{
+        height: 86%;
+    }
+    .input-search-btn{
+        width: 50%;
+    }
+    #banner{
+        width: 90%;
+        height: 95%;
+    }
+    .movie-poster{
+        width: 90%;
+    }
+    #buttons button{
+        padding: 2%;
+    }
+    #movie-details{
+        width: 90%;
+    }
+    footer{
+        height: 7%;
+    }
+}
+@media screen and (max-width:320px) {
+    .wrapper{
+        font-size: 10px;
+    }
+    nav{
+        height: 5%;
+    }
+    nav h1{
+        font-size: 0.9em;
+    }
+    #main{
+        height: 90%;
+    }
+    .input-search-btn input {
+        border-radius: 2px 0px 0px 2px;
+    }
+    .input-search-btn button{
+        border-radius: 0px 2px 2px 0px;
+        font-size: 0.9em;
+    }
+    #banner{
+        border-radius: 5px;
+    }
+    .movie-poster{
+        width: 100%;
+    }
+    #buttons button{
+        padding: 2%;
+    }
+    #movie-details{
+        width: 100%;
+    }
+    footer{   
+        height: 5%;    
+    }
+}
